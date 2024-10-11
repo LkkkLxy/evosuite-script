@@ -32,17 +32,21 @@
 如果只是需要evosuite生成测试用例，而不需要使用mvn test执行的话，上述过程可跳过。
 
 # 实现功能
-输入类名，方法名和文件路径，生成evosuite生成的测试用例并使用mvn test执行
+输入类名，方法名和文件路径，生成evosuite生成的测试用例并使用mvn test执行。
 
 # 使用方法
 ```
 python script.py <class_name> <method_name> <project_path> <test_path>
 ```
 参数解释:
-1.<class_name>:类的全类名
-2.<method_name>:方法名
-3.<project_path>:项目的绝对路径
-4.<test_path>:生成测试用例的存放路径
+1. <class_name>:类的全类名
+
+2. <method_name>:方法名
+
+3. <project_path>:项目的绝对路径
+
+4. <test_path>:生成测试用例的存放路径
+
 例如：
 ```
 python script.py net.hydromatic.morel.compile.NameGenerator inc /home/final-test/morel /home/final-test/morel/src/test/java
@@ -52,6 +56,8 @@ python script.py org.apache.commons.cli.ParseException wrap /home/final-test/com
 
 # 其他说明
 jdk版本：jdk11。
+
 目前datafaker仓库不支持(jdk17+)。
+
 对于某些method，evosuite生成测试用例时会报错导致无法生成，比如binance中的很多方法；而且有时指定的方法并没有被生成在测试用例里，可能是它工具的问题。
 
